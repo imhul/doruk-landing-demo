@@ -1,0 +1,671 @@
+@use "../variables";
+
+#horizontal-container {
+    z-index: 3;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    // display: flex;
+    // flex-wrap: nowrap;
+
+    .backgrounds {
+        .bottom {
+            .background-a,
+            .background-b {
+                position: absolute;
+                left: 0;
+                width: 100vw;
+                height: 100%;
+            }
+
+            .background-b {
+                z-index: 1;
+
+                svg:nth-child(1) {
+                    display: none;
+
+                    @media screen and (min-width: variables.$desktop) {
+                        display: block;
+                    }
+                }
+            }
+
+            .background-a {
+                z-index: 2;
+                top: 0;
+
+                @media screen and (orientation: portrait) {
+                    top: -10rem;
+
+                    @media screen and (min-width: variables.$extra-small) {
+                        top: -15rem;
+                    }
+
+                    @media screen and (min-width: variables.$mobile) {
+                        top: -10rem;
+                    }
+                }
+
+                @media screen and (orientation: landscape) {
+                    top: -50rem;
+
+                    @media screen and (min-width: variables.$mobile) {
+                        top: -30rem;
+                    }
+
+                    @media screen and (min-width: variables.$tablet) {
+                        top: -10rem;
+                    }
+
+                    @media screen and (min-width: variables.$desktop) {
+                        top: 0;
+                    }
+                }
+            }
+
+            .about-svg-dots-left,
+            .about-svg-dots-right {
+                position: absolute;
+                top: 0;
+            }
+
+            .about-svg-dots-left {
+                left: 10%;
+            }
+
+            .about-svg-dots-right {
+                right: 10%;
+            }
+        }
+    }
+
+    .slick-slider {
+        z-index: 10;
+
+        .slick-dots__custom {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            height: 4rem;
+            border: 0.1rem solid variables.$border-color;
+            border-radius: 3.6rem;
+            backdrop-filter: blur(0.7rem);
+            transition: border-color variables.$transition;
+
+            &:hover {
+                border-color: variables.$color-primary;
+            }
+
+            @media screen and (orientation: portrait) {
+                bottom: 15%;
+
+                @media screen and (min-width: variables.$mobile) {
+                    bottom: 10%;
+                }
+            }
+
+            @media screen and (orientation: landscape) {
+                bottom: 0;
+
+                @media screen and (min-width: variables.$mobile) {
+                    bottom: 3%;
+                }
+
+                @media screen and (min-width: variables.$mobile) and (min-height: variables.$mobile-height){
+                    bottom: 35%;
+                }
+
+                @media screen and (min-width: variables.$tablet) {
+                    bottom: 20%;
+                }
+                
+                @media screen and (min-width: variables.$desktop) {
+                    bottom: 25%;
+                }
+
+                // @media screen and (min-width: variables.$extra-large) {
+                //     bottom: 45%;
+                // }
+            }
+
+            li {
+                margin: 0 1.2rem;
+
+                button::before {
+                    font-size: 2rem;
+                    color: variables.$color-primary;
+                    opacity: 1;
+                    transition: color variables.$transition;
+                }
+
+                &:hover {
+                    button::before {
+                        color: variables.$color-white;
+                    }
+                }
+
+                &.slick-active {
+                    button::before {
+                        color: variables.$color-white;
+                    }
+
+                    &:hover {
+                        button::before {
+                            color: variables.$color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .horizontal-section {
+        z-index: 3;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+
+        .content {
+            display: flex;
+            align-items: flex-start;
+
+            @media screen and (orientation: portrait) {
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+            }
+
+            @media screen and (min-width: variables.$tablet) and (orientation: landscape) {
+                height: auto;
+            }
+
+            @media screen and (min-width: variables.$desktop), (orientation: landscape) {
+                justify-content: center;
+                flex-flow: row nowrap;
+            }
+
+            &.about-left,
+            &.about-right,
+            &.about-center {
+                .content-left {
+                    position: relative;
+                    top: 2rem;
+                    width: 90%;
+
+                    @media screen and (orientation: portrait) {
+                        width: 90%;
+                        margin: 0 auto;
+
+                        @media screen and (min-width: variables.$mobile) {
+                            width: 65rem;
+                        }
+
+                        @media screen and (min-width: variables.$tablet) {
+                            width: 81rem;
+                        }
+                    }
+
+                    @media screen and (orientation: landscape) {
+                        width: 50%;
+                        margin: 0;
+
+                        @media screen and (min-width: variables.$tablet) {
+                            width: 65rem;
+                        }
+
+                        @media screen and (min-width: variables.$desktop) {
+                            width: 81rem;
+
+                            @media screen and (min-resolution: 1.5x) {
+                                min-width: 81rem;
+                            }
+                        }
+                    }
+
+                    @media screen and (min-width: variables.$desktop) {
+                        // flex: 0 0 60%;
+                        left: -2.6rem;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 1rem;
+                        left: 0.4rem;
+                        width: 107%;
+                        height: 107%;
+                        backdrop-filter: blur(0.7rem);
+                        background: url("assets/svg/bg/about-bg.svg") no-repeat left bottom / contain;
+                        mask: url("assets/svg/bg/about-bg-mask.svg") no-repeat left bottom / contain;
+
+                        @media screen and (min-width: variables.$mobile) {
+                        }
+
+                        @media screen and (min-width: variables.$desktop) {
+                        }
+                    }
+
+                    .masked {
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        mask: url("assets/svg/bg/about-image-mask.svg") no-repeat center center / contain;
+                    }
+
+                    .title-block {
+                        position: absolute;
+                        top: -0.6rem;
+                        height: 5.6rem;
+                        border: 0.1rem solid variables.$color-primary;
+                        border-radius: 7.4rem;
+                        backdrop-filter: blur(0.7rem);
+                        padding: 0 6rem 0 2rem;
+
+                        @media screen and (orientation: portrait) {
+                            right: 2rem;
+                            width: calc(100% - 4.2rem);
+
+                            @media screen and (min-width: variables.$mobile) {
+                                right: 3.6rem;
+                                width: calc(100% - 8.8rem);
+                            }
+
+                            @media screen and (min-width: variables.$tablet) {
+                                right: 0;
+                                width: calc(100% - 6rem);
+                            }
+
+                            @media screen and (min-width: variables.$desktop) {
+                                right: -47rem;
+                                width: calc(100% - 18.2rem);
+                            }
+                        }
+
+                        @media screen and (orientation: landscape) {
+                            right: 2.2rem;
+                            width: calc(100% - 5rem);
+
+                            @media screen and (min-width: variables.$mobile) {
+                                right: 2.8rem;
+                                width: calc(100% - 6.6rem);
+                            }
+
+                            @media screen and (min-width: variables.$tablet) {
+                                right: 3.4rem;
+                                width: calc(100% - 8.4rem);
+                            }
+
+                            @media screen and (min-width: variables.$desktop) {
+                                right: -47rem;
+                                width: calc(100% - 18.2rem);
+                            }
+                        }
+
+                        @media screen and (min-width: variables.$tablet) {
+                            top: -1.5rem;
+                            height: 11.6rem;
+                            padding: 0 12rem 0 4rem;
+                        }
+
+                        @media screen and (min-width: variables.$desktop) {
+                            top: 0.8rem;
+                            height: 9.6rem;
+                            padding: 0 4rem 0 10rem;
+                        }
+
+                        .circle {
+                            position: absolute;
+                            top: -0.1rem;
+                            right: 0;
+                            width: 5.6rem;
+                            height: 5.6rem;
+                            border-radius: 50%;
+                            background-color: variables.$color-primary;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            @media screen and (min-width: variables.$tablet) {
+                                width: 11.6rem;
+                                height: 11.6rem;
+                            }
+
+                            @media screen and (min-width: variables.$desktop) {
+                                left: 0;
+                                right: unset;
+                                width: 9.6rem;
+                                height: 9.6rem;
+                            }
+
+                            i {
+                                transform: rotate(-90deg);
+                                font-size: 3.519rem;
+                                color: variables.$icon-color;
+
+                                @media screen and (min-width: variables.$tablet) {
+                                    transform: rotate(0);
+                                    font-size: 5.576rem;
+                                }
+                            }
+                        }
+
+                        .first-line,
+                        .second-line {
+                            position: relative;
+                            width: 100%;
+                            font-family: variables.$font-source-code-pro;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            text-align: center;
+                            text-transform: lowercase;
+                            text-shadow:
+                                0 0 0.6rem variables.$bg,
+                                0 0 1.2rem variables.$bg;
+                            color: variables.$color-white;
+
+                            @media screen and (min-width: variables.$extra-small) {
+                                font-size: 1.8rem;
+                            }
+
+                            @media screen and (min-width: variables.$desktop) {
+                                font-size: 2.8rem;
+                            }
+                        }
+
+                        .first-line {
+                            top: 0.6rem;
+                            // transform: translateX(-65%);
+                            text-wrap-mode: nowrap;
+
+                            span {
+                                margin-right: 1.6rem;
+                                color: variables.$color-primary;
+                            }
+
+                            // @media screen and (min-width: variables.$extra-small) {
+                            //     transform: translateX(-70%);
+                            // }
+
+                            @media screen and (min-width: variables.$tablet) {
+                                top: 2.4rem;
+                            }
+
+                            @media screen and (min-width: variables.$desktop) {
+                                top: 0.8rem;
+                                // transform: translateX(-50%);
+                            }
+                        }
+
+                        .second-line {
+                            top: 0.8rem;
+                            // transform: translateX(-50%);
+
+                            // @media screen and (min-width: variables.$extra-small) {
+                            //     transform: translateX(-40%);
+                            // }
+
+                            @media screen and (min-width: variables.$tablet) {
+                                top: 3.8rem;
+                                // transform: translateX(-55%);
+                            }
+
+                            @media screen and (min-width: variables.$desktop) {
+                                top: 1.2rem;
+                                // transform: translateX(-20%);
+                            }
+                        }
+                    }
+                }
+
+                .content-right {
+                    position: relative;
+
+                    @media screen and (min-width: variables.$mobile) and (orientation: portrait) {
+                        width: 100%;
+                        max-width: 81rem;
+                        margin: 0 auto;
+                    }
+
+                    @media screen and (min-width: variables.$mobile) and (orientation: landscape) {
+                        width: 100%;
+                        max-width: 32rem;
+                        margin: 0;
+                    }
+
+                    @media screen and (min-width: variables.$desktop) {
+                        width: auto;
+                        max-width: 81rem;
+                        margin: 0;
+                    }
+
+                    .text-block {
+                        position: relative;
+                        top: 8.4rem; // 5.8rem;
+                        left: 21%;
+                        width: 73%;
+                        height: 100%;
+
+                        @media screen and (min-width: variables.$mobile) and (orientation: portrait) {
+                            top: 12rem;
+                            left: 22%;
+                            width: 43.4rem;
+                            height: 35.4rem;
+                        }
+
+                        @media screen and (min-width: variables.$mobile) and (orientation: landscape) {
+                            top: 3.2rem;
+                            left: 5rem;
+                            width: 73%;
+                        }
+
+                        @media screen and (min-width: variables.$tablet) and (orientation: portrait) {
+                            left: 15rem;
+                        }
+
+                        @media screen and (min-width: variables.$desktop) {
+                            top: 18.6rem;
+                            left: 0.6rem;
+                            width: 43.4rem;
+                            height: 35.4rem;
+                        }
+
+                        &::before {
+                            content: "";
+                            z-index: 4;
+                            position: absolute;
+                            top: -1.6rem;
+                            left: -1.6rem;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 3.6rem;
+                            border: 0.1rem solid variables.$border-color;
+                            backdrop-filter: blur(0.7rem);
+
+                            @media screen and (min-width: variables.$mobile) and (orientation: portrait) {
+                                top: -3.6rem;
+                                left: -3.6rem;
+                                border-radius: 6.4rem;
+                            }
+
+                            @media screen and (min-width: variables.$mobile) and (orientation: landscape) {
+                                top: -1.6rem;
+                                left: -1.6rem;
+                                border-radius: 3.6rem;
+                            }
+
+                            @media screen and (min-width: variables.$desktop) and (orientation: landscape) {
+                                top: -3.6rem;
+                                left: -3.6rem;
+                                border-radius: 6.4rem;
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            z-index: 4;
+                            position: absolute;
+                            top: -0.8rem;
+                            left: -0.8rem;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 3.6rem;
+                            border: 0.1rem solid variables.$border-color;
+                            backdrop-filter: blur(0.7rem);
+
+                            @media screen and (min-width: variables.$mobile) and (orientation: portrait) {
+                                top: -1.8rem;
+                                left: -1.8rem;
+                                border-radius: 6.4rem;
+                            }
+
+                            @media screen and (min-width: variables.$mobile) and (orientation: landscape) {
+                                top: -0.8rem;
+                                left: -0.8rem;
+                                border-radius: 3.6rem;
+                            }
+
+                            @media screen and (min-width: variables.$desktop) and (orientation: landscape) {
+                                top: -1.8rem;
+                                left: -1.8rem;
+                                border-radius: 6.4rem;
+                            }
+                        }
+
+                        .text {
+                            z-index: 5;
+                            position: relative;
+                            height: 100%;
+                            min-height: 24rem;
+                            padding: 2rem 2.2rem;
+                            font-family: variables.$font-source-code-pro;
+                            font-size: 1.6rem;
+                            line-height: 2rem;
+                            border-radius: 3.6rem;
+                            border: 0.1rem solid variables.$border-color;
+                            color: variables.$color-white;
+                            backdrop-filter: blur(0.7rem);
+
+                            @media screen and (min-width: variables.$mobile) and (orientation: portrait) {
+                                padding: 4rem;
+                                font-size: 2.2rem;
+                                line-height: 2.8rem;
+                                border-radius: 6.4rem;
+                            }
+
+                            @media screen and (min-width: variables.$mobile) and (orientation: landscape) {
+                                padding: 2rem 2.2rem;
+                                font-size: 1.6rem;
+                                line-height: 2rem;
+                                border-radius: 3.6rem;
+                            }
+
+                            @media screen and (min-width: variables.$desktop) and (orientation: landscape) {
+                                padding: 4rem;
+                                font-size: 2.2rem;
+                                line-height: 2.8rem;
+                                border-radius: 6.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.about-center {
+                @media screen and (orientation: portrait) {
+                    flex-flow: column nowrap;
+                }
+
+                @media screen and (min-width: variables.$desktop), (orientation: landscape) {
+                    flex-flow: row-reverse nowrap;
+                }
+
+                .content-left {
+                    transform: scaleX(-1);
+                    display: inline-block;
+
+                    .title-block {
+                        .circle {
+                            left: unset;
+                            right: 0;
+                        }
+
+                        .first-line {
+                            transform: scaleX(-1); // translateX(40%);
+
+                            //     @media screen and (min-width: variables.$tablet) {
+                            //         transform: scaleX(-1) translateX(70%);
+                            //     }
+
+                            //     @media screen and (min-width: variables.$desktop) {
+                            //         transform: scaleX(-1) translateX(30%);
+                            //     }
+                        }
+
+                        .second-line {
+                            transform: scaleX(-1); // translateX(70%);
+
+                            //     @media screen and (min-width: variables.$mobile) {
+                            //         transform: scaleX(-1) translateX(85%);
+                            //     }
+
+                            //     @media screen and (min-width: variables.$desktop) {
+                            //         transform: scaleX(-1) translateX(100%);
+                            //     }
+                        }
+                    }
+                }
+
+                .content-right {
+                    @media screen and (orientation: landscape),
+                        (min-width: variables.$tablet) and (orientation: portrait) {
+                        margin: 0 10rem 0 0;
+                    }
+
+                    @media screen and (orientation: landscape) {
+                        margin: 0;
+                    }
+
+                    .text-block {
+                        left: 10.6%;
+
+                        @media screen and (min-width: variables.$mobile) and (orientation: portrait) {
+                            left: 14%;
+                        }
+
+                        @media screen and (min-width: variables.$mobile) and (orientation: landscape) {
+                            left: 3.6%;
+                        }
+
+                        @media screen and (min-width: variables.$tablet) {
+                            left: 1rem;
+                        }
+
+                        @media screen and (min-width: variables.$desktop) {
+                            left: -6.4rem;
+                        }
+
+                        &::before {
+                            left: unset;
+                            right: -1.6rem;
+
+                            @media screen and (min-width: variables.$mobile) {
+                                right: -3.6rem;
+                            }
+                        }
+
+                        &::after {
+                            left: unset;
+                            right: -0.8rem;
+
+                            @media screen and (min-width: variables.$mobile) {
+                                right: -1.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

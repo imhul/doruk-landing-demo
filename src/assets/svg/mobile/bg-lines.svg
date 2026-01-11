@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="835.57178"
+   height="1587.1221"
+   viewBox="0 0 835.57174 1587.122"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="bg-lines.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2893326"
+     inkscape:cx="70.579152"
+     inkscape:cy="1265.3834"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <clipPath
+       id="clip-path">
+      <rect
+         id="Rectangle_1144"
+         data-name="Rectangle 1144"
+         width="605.04199"
+         height="1568.3979"
+         fill="none"
+         x="0"
+         y="0" />
+    </clipPath>
+    <clipPath
+       id="clip-path-4">
+      <rect
+         id="Rectangle_1144-8"
+         data-name="Rectangle 1144"
+         width="605.04199"
+         height="1568.3979"
+         fill="none"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+  <g
+     id="back22Asset_2"
+     data-name="back22Asset 2"
+     transform="matrix(-0.97437006,-0.22495105,-0.22495105,0.97437006,835.57176,136.10483)">
+    <g
+       id="Layer_2"
+       data-name="Layer 2">
+      <g
+         id="Graphic_elements"
+         data-name="Graphic elements">
+        <g
+           id="Group_3526"
+           data-name="Group 3526"
+           clip-path="url(#clip-path-4)">
+          <g
+             id="Group_3525"
+             data-name="Group 3525"
+             transform="translate(0,-651.813)">
+            <path
+               id="Path_2357"
+               data-name="Path 2357"
+               d="m 0,0 v 1170.487 l 204.524,211.294 v 286.184 l 138.706,149.712 v 329.358"
+               transform="translate(0,73.175)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2358"
+               data-name="Path 2358"
+               d="m 0,0 v 1170.51 l 204.524,211.29 v 286.185 l 138.706,149.692 v 329.381"
+               transform="translate(19.713,60.964)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2359"
+               data-name="Path 2359"
+               d="M 0,0 V 1170.509 L 204.542,1381.8 v 286.184 l 138.688,149.693 v 329.381"
+               transform="translate(39.427,48.776)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2360"
+               data-name="Path 2360"
+               d="m 0,0 v 1170.51 l 204.542,211.271 v 286.184 l 138.688,149.712 v 329.381"
+               transform="translate(59.14,36.588)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2361"
+               data-name="Path 2361"
+               d="m 0,0 v 1170.486 l 204.524,211.294 v 286.184 l 138.688,149.712 v 329.358"
+               transform="translate(78.871,24.4)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2362"
+               data-name="Path 2362"
+               d="M 0,0 V 1170.509 L 204.524,1381.8 v 286.184 l 138.688,149.689 v 329.381"
+               transform="translate(98.585,12.188)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2363"
+               data-name="Path 2363"
+               d="m 0,0 v 1170.51 l 204.524,211.29 v 286.184 l 138.688,149.689 v 329.381"
+               transform="translate(118.298)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2364"
+               data-name="Path 2364"
+               d="M 0,0 V 1105.727 L 204.524,1317 v 286.184 l 138.706,149.711 v 329.381"
+               transform="translate(138.011,52.595)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2365"
+               data-name="Path 2365"
+               d="m 0,0 v 1109.545 l 204.524,211.271 V 1607 l 138.706,149.713 v 329.381"
+               transform="translate(157.725,36.588)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+            <path
+               id="Path_2366"
+               data-name="Path 2366"
+               d="m 0,0 v 1056.882 l 204.524,211.294 v 286.184 l 138.706,149.69 v 329.381"
+               transform="translate(177.438,77.04)"
+               fill="none"
+               stroke="#707070"
+               stroke-miterlimit="10"
+               stroke-width="0.25" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
