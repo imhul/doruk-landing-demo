@@ -72,21 +72,21 @@ const MainSection = ({ lang, setLang, sectionIsActive, scrollProgress }) => {
                         <div
                             className="rectangle"
                             style={{
-                                transform: `translate(${sectionIsActive && scrollProgress > 0
+                                transform: `translate(${scrollProgress > 0
                                     ? -(Math.round(scrollProgress / 8)) : 0}rem)`
                             }}
                         />
                         <div
                             className="rectangle"
                             style={{
-                                transform: `translate(${sectionIsActive && scrollProgress > 0
+                                transform: `translate(${scrollProgress > 0
                                     ? Math.round(scrollProgress / 8) : 0}rem)`
                             }}
                         />
                         <div
                             className="rectangle"
                             style={{
-                                transform: `translate(${sectionIsActive && scrollProgress > 0
+                                transform: `translate(${scrollProgress > 0
                                     ? -(Math.round(scrollProgress / 8)) : 0}rem)`
                             }}
                         />
@@ -105,8 +105,7 @@ const MainSection = ({ lang, setLang, sectionIsActive, scrollProgress }) => {
                     <span
                         className="title__left"
                         style={{
-                            transform: `translateX(calc(${sectionIsActive
-                                ? -(Math.round(scrollProgress / 2)) : 0}rem - 50%))`
+                            transform: `translateX(calc(${Math.round(scrollProgress / 2)}rem - 50%))`
                         }}
                     >
                         {translate("HOME_TITLE_PART_1", lang)}
@@ -114,8 +113,7 @@ const MainSection = ({ lang, setLang, sectionIsActive, scrollProgress }) => {
                     <span
                         className="title__right"
                         style={{
-                            transform: `translateX(calc(${sectionIsActive
-                                ? (Math.round(scrollProgress / 2)) : 0}rem + 50%))`
+                            transform: `translateX(calc(${Math.round(scrollProgress / 2)}rem + 50%))`
                         }}
                     >
                         {translate("HOME_TITLE_PART_2", lang)}
